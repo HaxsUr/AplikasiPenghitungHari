@@ -67,7 +67,7 @@ public class AplikasiPenghitungHari extends javax.swing.JFrame {
 
         jLabel2.setText("PILIH BULAN");
 
-        bulanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "JANUARY", "FEBRUARI", "MARET", "APRIL", "MEI", "JUNI", "JULI", "AGUSTUS", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DESEMBER" }));
+        bulanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" }));
 
         tahunSpinner.setModel(new javax.swing.SpinnerNumberModel(2024, 1990, 2030, 1));
         tahunSpinner.setEditor(new javax.swing.JSpinner.NumberEditor(tahunSpinner, "#"));
@@ -176,6 +176,11 @@ public class AplikasiPenghitungHari extends javax.swing.JFrame {
         );
 
         btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
 
         btnKeluar.setText("Keluar");
 
@@ -297,6 +302,13 @@ public class AplikasiPenghitungHari extends javax.swing.JFrame {
 }
 
     }//GEN-LAST:event_btnHitungActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        hasilJumlahHariLabel.setText("HASIL JUMLAH HARI: ");
+    hariPertamaLabel.setText("HARI PERTAMA: ");
+    hariTerakhirLabel.setText("HARI TERAKHIR: ");
+    selisihHariLabel.setText("SELISIH HARI: " );
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     /**
      * @param args the command line arguments
