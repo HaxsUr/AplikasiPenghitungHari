@@ -183,6 +183,11 @@ public class AplikasiPenghitungHari extends javax.swing.JFrame {
         });
 
         btnKeluar.setText("Keluar");
+        btnKeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKeluarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -309,6 +314,15 @@ public class AplikasiPenghitungHari extends javax.swing.JFrame {
     hariTerakhirLabel.setText("HARI TERAKHIR: ");
     selisihHariLabel.setText("SELISIH HARI: " );
     }//GEN-LAST:event_btnHapusActionPerformed
+
+    private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
+        String tanya = "Apakah anda yakin akan keluar aplikasi?";
+        boolean yakin = JOptionPane.showConfirmDialog(rootPane, tanya)==
+                JOptionPane.YES_OPTION;
+        if(yakin){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnKeluarActionPerformed
 
     /**
      * @param args the command line arguments
